@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require "test_gem"
+
+max_count = ARGV[0]&.to_i
+
+unless max_count
+  puts 'Usage: test_gem NUM'
+  exit 1
+end
+
+TestGem.run(max_count)
